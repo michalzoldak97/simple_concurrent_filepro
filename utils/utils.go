@@ -16,7 +16,7 @@ func InitResultMap() map[int32]int {
 
 func PrintResMap(resMap map[int32]int) {
 	for ch := 'a'; ch <= 'z'; ch++ {
-		fmt.Printf("%s ==> %d\n", string(ch), resMap[int32(ch)])
+		fmt.Printf("%s ==> %d   ", string(ch), resMap[int32(ch)])
 	}
 }
 

@@ -21,7 +21,7 @@ func calcChars(charCount map[int32]int, line string) {
 func Run() {
 	charCount := utils.InitResultMap()
 
-	file, err := os.Open("./data/bible.txt")
+	file, err := os.Open("./data/sample.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
