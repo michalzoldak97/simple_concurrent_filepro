@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/michalzoldak97/simple_concurrent_filepro/five"
 	"github.com/michalzoldak97/simple_concurrent_filepro/four"
 	"github.com/michalzoldak97/simple_concurrent_filepro/one"
 	"github.com/michalzoldak97/simple_concurrent_filepro/three"
@@ -12,4 +13,5 @@ func main() {
 	two.Run()
 	three.Run()
 	four.Run()
+	five.Run()
 }
