@@ -12,7 +12,7 @@ import (
 
 // to check if map key exists: if _, ok := charCount[char]; ok
 
-func calcChars(charCount map[int32]int, line string) {
+func calcChars(charCount map[int32]int32, line string) {
 	for _, char := range line {
 		charCount[char]++
 	}

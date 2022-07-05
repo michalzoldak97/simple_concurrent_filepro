@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-func InitResultMap() map[int32]int {
-	resMap := make(map[int32]int)
+func InitResultMap() map[int32]int32 {
+	resMap := make(map[int32]int32)
 
 	for ch := 'a'; ch <= 'z'; ch++ {
 		resMap[int32(ch)] = 0
@@ -14,9 +14,17 @@ func InitResultMap() map[int32]int {
 	return resMap
 }
 
-func PrintResMap(resMap map[int32]int) {
+func PrintResMap(resMap map[int32]int32) {
 	for ch := 'a'; ch <= 'z'; ch++ {
 		fmt.Printf("%s ==> %d   ", string(ch), resMap[int32(ch)])
+	}
+}
+
+func TransferRes(resMap map[int32]int32, a []int32) {
+	i := 0
+	for ch := 'a'; ch <= 'z'; ch++ {
+		resMap[int32(ch)] = a[i]
+		i++
 	}
 }
 

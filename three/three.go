@@ -17,7 +17,7 @@ var (
 	wGroup = sync.WaitGroup{}
 )
 
-func calcChars(charCount map[int32]int, line string) {
+func calcChars(charCount map[int32]int32, line string) {
 	res := utils.InitResultMap()
 	for _, char := range line {
 		res[char]++
