@@ -37,7 +37,7 @@ func calcChars(inChan chan string) {
 func Run() {
 	charCount := utils.InitResultMap()
 
-	file, err := os.Open("./data/sample.txt")
+	file, err := os.Open(utils.F_PTH)
 	if err != nil {
 		fmt.Println(err)
 	}

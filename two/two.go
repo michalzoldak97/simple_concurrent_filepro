@@ -26,17 +26,22 @@ func calcChars(inChan chan string) {
 }
 
 func Run() {
-	file, err := os.Open("./data/sample.txt")
+	file, err := os.Open(utils.F_PTH)
 	if err != nil {
 		fmt.Println(err)
 	}
 	defer file.Close()
 
+	fi_stat, err := file.Stat()
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	scanner := bufio.NewScanner(file)
 
 	defer utils.ShowExecTime("two", time.Now())
 
-	linesChan := make(chan string)
+	linesChan := make(chan string, fi_stat.Size())
 
 	wg.Add(1)
 	go calcChars(linesChan)

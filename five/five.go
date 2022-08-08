@@ -47,7 +47,7 @@ func calcChars(line string, kvpChan chan kvp) {
 func Run() {
 	charCount := utils.InitResultMap()
 
-	file, err := os.Open("./data/sample.txt")
+	file, err := os.Open(utils.F_PTH)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -55,7 +55,7 @@ func Run() {
 
 	scanner := bufio.NewScanner(file)
 
-	defer utils.ShowExecTime("three", time.Now())
+	defer utils.ShowExecTime("five", time.Now())
 
 	var buff bytes.Buffer
 	kvpChan := make(chan kvp)

@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const F_PTH = "./data/sample.txt"
+
 func InitResultMap() map[int32]int32 {
 	resMap := make(map[int32]int32)
 
